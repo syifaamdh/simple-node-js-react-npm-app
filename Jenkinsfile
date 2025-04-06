@@ -12,7 +12,12 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'npm test || echo "No tests found"'
+                sh 'npm test || echo "No tests available"'
+            }
+        }
+        stage('Deliver') {
+            steps {
+                echo 'Deploy stage placeholder'
             }
         }
     }
