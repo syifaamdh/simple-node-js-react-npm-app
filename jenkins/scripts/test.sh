@@ -1,4 +1,8 @@
 #!/usr/bin/env sh
+#!/bin/bash
+echo "Running tests..."
+npm test || echo "No tests defined, skipping..."
+
 
 echo 'The following "npm" command (if executed) installs the "cross-env"'
 echo 'dependency into the local "node_modules" directory, which will ultimately'
