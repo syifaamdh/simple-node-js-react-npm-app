@@ -12,12 +12,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'npm test || echo "skip test (belum ada test file)"'
-            }
-        }
-        stage('Deliver') {
-            steps {
-                echo '✅ Build selesai, siap untuk deployment!'
+                sh 'npm test || echo "No tests found"'
             }
         }
     }
