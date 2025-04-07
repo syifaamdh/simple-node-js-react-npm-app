@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'docker-jenkins_agent-1-node' }
+    agent { label 'desktop-jenkins_agent-1-node' }
 
     stages {
         stage('Build') {
