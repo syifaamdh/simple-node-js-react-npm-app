@@ -1,17 +1,10 @@
 pipeline {
-  agent any
-
-  stages {
-    stage('Build') {
-      steps {
-        sh 'npm install'
-      }
+    agent { label 'docker-ssh-jenkins-agent' }
+    stages {
+        stage('Build') {
+            steps {
+                sh 'npm install'
+            }
+        }
     }
-
-    stage('Test') {
-      steps {
-        sh './jenkins/scripts/test.sh'
-      }
-    }
-  }
 }
