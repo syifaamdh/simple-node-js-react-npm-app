@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'docker-ssh-jenkins-agent' }
+    agent { label 'docker-jenkins_agent-1-node' }
 
     stages {
         stage('Build') {
